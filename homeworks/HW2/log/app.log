@@ -5,3 +5,11 @@
 2019-03-10 14:05:00.200 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:49)] - Hidden word: snorty
 2019-03-10 14:26:44.001 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:43)] - Logger started
 2019-03-10 14:26:44.082 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:49)] - Hidden word: cibols
+2019-03-10 14:57:49.496 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:42)] - Logger started
+2019-03-10 14:57:49.573 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:48)] - Hidden word: infare
+2019-03-10 15:00:53.904 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:42)] - Logger started
+2019-03-10 15:00:53.967 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:48)] - Hidden word: uganda
+2019-03-10 15:01:48.701 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:55)] - usersWord: uganda
+2019-03-10 15:02:34.345 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:42)] - Logger started
+2019-03-10 15:02:34.411 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:48)] - Hidden word: russud
+2019-03-10 15:02:41.219 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:55)] - usersWord: russud
