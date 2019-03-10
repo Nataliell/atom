@@ -1,4 +1,5 @@
 package ru.ex;
+
 import java.io.IOException;
 import java.nio.file.Paths;
 import java.util.ArrayList;
@@ -8,8 +9,7 @@ import java.util.concurrent.ThreadLocalRandom;
 
 public class WordProv {
 
-    public String getWord()
-    {
+    public String getWord() {
         Scanner scanner = null;
         try {
             scanner = new Scanner(Paths.get("dictionary.txt"));
@@ -17,8 +17,7 @@ public class WordProv {
             e.printStackTrace();
         }
         ArrayList<String> words = new ArrayList<>();
-        while(scanner.hasNextLine())
-        {
+        while (scanner.hasNextLine()) {
             words.add(scanner.nextLine());
         }
 

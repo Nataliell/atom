@@ -1,0 +1,7 @@
+2019-03-10 13:41:21.519 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:74)] - Attempts: 1. Cows: 0. Bulls: 1
+2019-03-10 13:58:20.836 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:75)] - Attempts: 1. Cows: 1. Bulls: 0
+2019-03-10 13:58:26.450 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:75)] - Attempts: 2. Cows: 0. Bulls: 0
+2019-03-10 14:05:00.140 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:43)] - Logger started
+2019-03-10 14:05:00.200 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:49)] - Hidden word: snorty
+2019-03-10 14:26:44.001 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:43)] - Logger started
+2019-03-10 14:26:44.082 DEBUG [main] [ru.ex.Main] [main] [ru.ex.Main.main(Main.java:49)] - Hidden word: cibols
