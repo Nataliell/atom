@@ -28,6 +28,16 @@ public class ChatClientTest {
     }
 
     @Test
+    public void logout() throws IOException {
+        Response login = ChatClient.login(MY_NAME_IN_CHAT);
+        System.out.println("[" + login + "]");
+
+        Response logout = ChatClient.logout(MY_NAME_IN_CHAT);
+        System.out.println("[" + logout + "]");
+        Assert.assertEquals(200, logout.code());
+    }
+
+    @Test
     public void viewChat() throws IOException {
         Response response = ChatClient.viewChat();
         System.out.println("[" + response + "]");
@@ -46,9 +56,45 @@ public class ChatClientTest {
 
     @Test
     public void say() throws IOException {
+        Response login = ChatClient.login(MY_NAME_IN_CHAT);
+        System.out.println("[" + login + "]");
+        System.out.println();
+
         Response response = ChatClient.say(MY_NAME_IN_CHAT, MY_MESSAGE_TO_CHAT);
         System.out.println("[" + response + "]");
         System.out.println(response.body().string());
         Assert.assertEquals(200, response.code());
     }
+
+    @Test
+    public void getDate() throws IOException {
+        Response login = ChatClient.login(MY_NAME_IN_CHAT);
+        System.out.println("[" + login + "]");
+
+        Response response = ChatClient.getTime(MY_NAME_IN_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(200, response.code());
+    }
+
+    @Test
+    public void clearChat() throws IOException {
+        Response login = ChatClient.login(MY_NAME_IN_CHAT);
+        System.out.println("[" + login + "]");
+
+        Response response = ChatClient.getTime(MY_NAME_IN_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+
+        Response say1 = ChatClient.say(MY_NAME_IN_CHAT, MY_MESSAGE_TO_CHAT);
+        System.out.println("[" + say1 + "]");
+
+        Response say2 = ChatClient.say(MY_NAME_IN_CHAT, MY_MESSAGE_TO_CHAT + "!!!");
+        System.out.println("[" + say2 + "]");
+
+        Response clearChat = ChatClient.clearChat(MY_NAME_IN_CHAT);
+        System.out.println("[" + clearChat + "]");
+        Assert.assertTrue(clearChat.code() == 200);
+    }
+
 }
