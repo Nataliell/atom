@@ -45,7 +45,6 @@ public class ChatClientTest {
         Assert.assertEquals(200, response.code());
     }
 
-
     @Test
     public void viewOnline() throws IOException {
         Response response = ChatClient.viewOnline();
@@ -67,6 +66,21 @@ public class ChatClientTest {
     }
 
     @Test
+    public void sayWithoutUser() throws IOException {
+        Response login = ChatClient.login(MY_NAME_IN_CHAT);
+        System.out.println("[" + login + "]");
+        System.out.println();
+
+        Response logout = ChatClient.logout(MY_NAME_IN_CHAT);
+        System.out.println("[" + logout + "]");
+
+        Response response = ChatClient.say(MY_NAME_IN_CHAT, MY_MESSAGE_TO_CHAT);
+        System.out.println("[" + response + "]");
+        System.out.println(response.body().string());
+        Assert.assertEquals(400, response.code());
+    }
+
+    @Test
     public void getDate() throws IOException {
         Response login = ChatClient.login(MY_NAME_IN_CHAT);
         System.out.println("[" + login + "]");
@@ -84,7 +98,6 @@ public class ChatClientTest {
 
         Response response = ChatClient.getTime(MY_NAME_IN_CHAT);
         System.out.println("[" + response + "]");
-        System.out.println(response.body().string());
 
         Response say1 = ChatClient.say(MY_NAME_IN_CHAT, MY_MESSAGE_TO_CHAT);
         System.out.println("[" + say1 + "]");
@@ -94,7 +107,10 @@ public class ChatClientTest {
 
         Response clearChat = ChatClient.clearChat(MY_NAME_IN_CHAT);
         System.out.println("[" + clearChat + "]");
-        Assert.assertTrue(clearChat.code() == 200);
+        String body = clearChat.body().string();
+        System.out.println(body);
+        System.out.println();
+        Assert.assertTrue(body.equals(MY_NAME_IN_CHAT + " cleared the chat!"));
     }
 
 }

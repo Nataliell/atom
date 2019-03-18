@@ -131,7 +131,7 @@ public class ChatController {
         if (usersOnline.containsKey(name)) {
             messages.clear();
             messages.add(name + " cleared the chat!");
-            return ResponseEntity.ok().build();
+            return ResponseEntity.ok(name + " cleared the chat!");
         }
         return ResponseEntity.badRequest().body("User is not logged in:(");
     }
