@@ -8,7 +8,6 @@ repositories {
 
 apply plugin: 'java'
 apply plugin: 'checkstyle'
-apply plugin: 'jacoco'
 
 dependencies {
     // https://mvnrepository.com/artifact/org.slf4j/slf4j-api
@@ -31,8 +30,4 @@ checkstyle {
     ignoreFailures = false
     toolVersion = '7.5'
     configFile = new File('../config/checkstyle/checkstyle.xml')
-}
-
-test {
-    useJUnitPlatform()
 }
